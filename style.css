@@ -1,0 +1,1388 @@
+body {margin: 0;
+      min-height: 100vh;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: cen ter;
+     
+      background:#fdf187ff;
+      font-family: Arial, Helvetica, sans-                   serif;
+     text-align: center;}
+h1{ color: #ff4f81;
+    font-size: 40px;}
+p{color: #000;
+  font-size: 18px;}
+.music-player {
+    margin: 25px auto 0;
+    padding: 12px 15px;
+
+    max-width: 350px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+}
+
+.music-icon {
+    font-size: 28px;
+}
+
+.music-info {
+    flex: 1;
+    text-align: left;
+}
+
+.music-info b {
+    display: block;
+}
+
+.music-info span {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.music-player button {
+    margin: 0;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+
+    border-radius: 50%;
+} .cover {
+    width: 60px;
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    width: 92%;
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    color: #e75480;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.gallery-subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* WAJIB GRID */
+.gallery {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 15px;
+}
+
+/* SETIAP FOTO */
+.gallery-item {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #eee;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* HP */
+@media screen and (max-width: 600px) {
+
+    .gallery {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        height: 180px;
+    }
+
+}
+/* =========================
+   LIGHTBOX + SLIDESHOW
+========================= */
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 99999;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 82%;
+    max-height: 82%;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+}
+
+/* tombol X */
+
+#closeLightbox {
+    position: absolute;
+
+    top: 15px;
+    right: 25px;
+
+    color: white;
+
+    font-size: 50px;
+
+    cursor: pointer;
+
+    z-index: 100001;
+}
+
+/* tombol kiri kanan */
+
+.slide-btn {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 70px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .2);
+
+    color: white;
+
+    font-size: 50px;
+
+    cursor: pointer;
+
+    z-index: 100000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .2s;
+}
+
+.slide-btn:hover {
+    background: rgba(255, 255, 255, .4);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* HP */
+
+@media (max-width: 600px) {
+
+    .lightbox img {
+        max-width: 78%;
+        max-height: 75%;
+    }
+
+    .slide-btn {
+        width: 40px;
+        height: 55px;
+
+        font-size: 40px;
+    }
+
+    .prev {
+        left: 8px;
+    }
+
+    .next {
+        right: 8px;
+    }
+
+}
+/* =========================
+   SURAT
+========================= */
+
+.letter-section {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 70px auto;
+
+    text-align: center;
+}
+
+.letter-section h2 {
+    color: #e75480;
+    font-size: 30px;
+}
+
+.letter-subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.letter-button {
+    margin: 0;
+
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #e75480;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.letter-button:hover {
+    transform: scale(1.05);
+}
+
+.letter-card {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, .85);
+
+    border-radius: 25px;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .1);
+
+    animation: letterOpen .6s ease;
+}
+
+.letter-card.show {
+    display: block;
+}
+
+.letter-card h3 {
+    text-align: center;
+
+    color: #e75480;
+
+    margin-bottom: 25px;
+}
+
+.letter-signature {
+    margin-top: 25px;
+
+    text-align: right;
+
+    font-weight: bold;
+
+    color: #e75480;
+}
+
+@keyframes letterOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* =========================
+   SURPRISE BOX
+========================= */
+
+.surprise-section {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 80px auto;
+
+    text-align: center;
+}
+
+.surprise-section h2 {
+    color: #e75480;
+    font-size: 30px;
+}
+
+.gift-button {
+    margin-top: 25px;
+
+    width: 110px;
+    height: 110px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #fff;
+
+    font-size: 65px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .12);
+
+    transition: .3s;
+}
+
+.gift-button:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.surprise-message {
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, .9);
+
+    border-radius: 25px;
+
+    line-height: 1.8;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .1);
+
+    animation: surpriseOpen .6s ease;
+}
+
+.surprise-message.show {
+    display: block;
+}
+
+.big-heart {
+    font-size: 60px;
+
+    animation: heartbeat 1s infinite;
+}
+
+.surprise-message h3 {
+    color: #e75480;
+
+    font-size: 25px;
+}
+
+.surprise-signature {
+    margin-top: 25px;
+
+    font-weight: bold;
+
+    color: #e75480;
+}
+
+@keyframes surpriseOpen {
+
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+/* =========================
+   COUNTER
+========================= */
+
+.counter-section {
+    width: 90%;
+    max-width: 700px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.counter-section h2 {
+    color: #e75480;
+    font-size: 30px;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    width: 100px;
+    padding: 18px 10px;
+
+    background: rgba(255, 255, 255, .85);
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.time-box span {
+    display: block;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    color: #e75480;
+}
+
+.time-box small {
+    color: #777;
+}
+
+/* FLOATING HEARTS */
+
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 99999;
+}
+
+.floating-hearts span {
+    position: absolute;
+
+    bottom: -60px;
+
+    font-size: 28px;
+
+    animation: naikHati 8s linear infinite;
+}
+
+/* posisi */
+
+.floating-hearts span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 35%;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 50%;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 65%;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 80%;
+    animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 92%;
+    animation-delay: 6s;
+}
+
+@keyframes naikHati {
+
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50vh) scale(1.2);
+        opacity: .8;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(.7);
+        opacity: 0;
+    }
+
+}
+
+/* =========================
+   HERO / OPENING
+========================= */
+
+.hero {
+    min-height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 25px 40px;
+
+    position: relative;
+}
+
+.hero-heart {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    animation: heroHeart 2s ease-in-out infinite;
+}
+
+.hero-small {
+    margin: 0 0 12px;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #e75480;
+
+    font-weight: bold;
+}
+
+.hero h1 {
+    margin: 0;
+
+    font-size: clamp(38px, 9vw, 70px);
+
+    color: #e75480;
+
+    line-height: 1.1;
+}
+
+.hero-text {
+    max-width: 600px;
+
+    margin: 25px auto 15px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #777;
+}
+
+.hero-line {
+    width: 70px;
+    height: 2px;
+
+    margin: 15px 0;
+
+    background: #e75480;
+
+    border-radius: 10px;
+}
+
+.hero-date {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #999;
+
+    letter-spacing: 1px;
+}
+
+@keyframes heroHeart {
+
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.08);
+    }
+
+}
+
+/* =========================
+   HERO ANIMATION
+========================= */
+
+.hero {
+    animation: heroAppear 1.2s ease forwards;
+}
+
+.hero-heart {
+    animation:
+        heroHeart 2s ease-in-out infinite,
+        heroFade 1s ease forwards;
+}
+
+.hero-small {
+    opacity: 0;
+    animation: heroFade 1s ease .2s forwards;
+}
+
+.hero h1 {
+    opacity: 0;
+    animation: heroFade 1s ease .4s forwards;
+}
+
+.hero-text {
+    opacity: 0;
+    animation: heroFade 1s ease .6s forwards;
+}
+
+.hero-line {
+    opacity: 0;
+    animation: heroFade 1s ease .8s forwards;
+}
+
+.hero-date {
+    opacity: 0;
+    animation: heroFade 1s ease 1s forwards;
+}
+
+@keyframes heroFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+/* =================================
+   FINAL VISUAL POLISH
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fff1f6 0%,
+            #fff8fb 35%,
+            #ffffff 75%
+        );
+
+    color: #555;
+
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   JUDUL
+================================ */
+
+h1 {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: 40px auto 25px;
+
+    padding: 0 20px;
+
+    font-size: clamp(30px, 6vw, 55px);
+
+    line-height: 1.2;
+
+    color: #e75480;
+
+    letter-spacing: -1px;
+}
+
+
+/* ================================
+   PARAGRAF PEMBUKA
+================================ */
+
+body > p {
+    max-width: 650px;
+
+    margin: 20px auto 45px;
+
+    padding: 0 25px;
+
+    text-align: center;
+
+    line-height: 1.9;
+
+    color: #777;
+
+    font-size: 16px;
+}
+
+
+/* ================================
+   MUSIC PLAYER
+================================ */
+
+.music-player {
+    width: min(90%, 650px);
+
+    margin: 30px auto;
+
+    padding: 14px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, .75);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, .8);
+
+    box-shadow:
+        0 15px 40px rgba(231, 84, 128, .12);
+
+    transition: .3s;
+}
+
+.music-player:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 20px 45px rgba(231, 84, 128, .18);
+}
+
+.cover {
+    width: 58px;
+    height: 58px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.12);
+}
+
+.music-info {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.music-info b {
+    font-size: 15px;
+}
+
+.music-info span {
+    color: #999;
+
+    font-size: 12px;
+}
+
+#playBtn {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e75480;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+#playBtn:hover {
+    transform: scale(1.1);
+}
+
+
+/* ================================
+   SECTION SPACING
+================================ */
+
+.gallery-section,
+.letter-section,
+.surprise-section,
+.counter-section {
+    position: relative;
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/* ================================
+   SECTION TITLE
+================================ */
+
+.gallery-section h2,
+.letter-section h2,
+.surprise-section h2,
+.counter-section h2 {
+    font-size: clamp(27px, 5vw, 36px);
+
+    letter-spacing: -.5px;
+}
+
+
+/* ================================
+   LETTER + SURPRISE
+================================ */
+
+.letter-card,
+.surprise-message {
+    border: 1px solid rgba(231, 84, 128, .08);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 15px 45px rgba(231, 84, 128, .1);
+}
+
+.letter-card p,
+.surprise-message p {
+    color: #666;
+
+    line-height: 1.9;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.letter-button,
+.restart-game {
+    box-shadow:
+        0 8px 20px rgba(231, 84, 128, .2);
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+}
+
+.letter-button:hover,
+.restart-game:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(231, 84, 128, .28);
+}
+
+
+/* ================================
+   COUNTER
+================================ */
+
+.time-box {
+    border: 1px solid rgba(231, 84, 128, .08);
+
+    transition: .25s;
+}
+
+.time-box:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(231, 84, 128, .12);
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .music-player {
+        width: 92%;
+
+        padding: 12px;
+    }
+
+    .cover {
+        width: 52px;
+        height: 52px;
+    }
+
+    body > p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .gallery-section,
+    .letter-section,
+    .surprise-section,
+    .counter-section {
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+
+}
+
+/* =================================
+   🌻 SUNFLOWER THEME
+================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at top,
+            #fff8cf 0%,
+            #fffdf0 35%,
+            #ffffff 75%
+        );
+
+    color: #5b4a16;
+}
+
+/* Judul */
+
+h1 {
+    color: #d89b00;
+}
+
+.hero-small {
+    color: #d89b00;
+}
+
+.hero h1 {
+    color: #d89b00;
+}
+
+.hero-text {
+    color: #75652d;
+}
+
+.hero-line {
+    background: #e7ad00;
+}
+
+.hero-date {
+    color: #9b8a48;
+}
+
+/* 🌻 Music Player */
+
+.music-player {
+    border: 1px solid rgba(231, 173, 0, .18);
+
+    box-shadow:
+        0 15px 40px rgba(180, 135, 0, .12);
+}
+
+#playBtn {
+    background: #e5a900;
+
+    box-shadow:
+        0 5px 15px rgba(229, 169, 0, .25);
+}
+
+#playBtn:hover {
+    background: #c99100;
+}
+
+/* 📸 Gallery */
+
+.gallery-section h2 {
+    color: #d89b00;
+}
+
+.gallery-subtitle {
+    color: #8b7a3c;
+}
+
+.gallery-item:hover {
+    box-shadow:
+        0 15px 35px rgba(180, 135, 0, .18);
+}
+
+/* 💌 Surat */
+
+.letter-section h2,
+.surprise-section h2,
+.counter-section h2 {
+    color: #d89b00;
+}
+
+.letter-card,
+.surprise-message,
+.time-box {
+    border: 1px solid rgba(231, 173, 0, .12);
+
+    box-shadow:
+        0 15px 45px rgba(180, 135, 0, .10);
+}
+
+/* Tombol */
+
+.letter-button,
+.gift-button {
+    background: #e5a900;
+}
+
+.letter-button:hover,
+.gift-button:hover {
+    background: #c99100;
+}
+
+/* Counter */
+
+.time-box span {
+    color: #d89b00;
+}
+
+/* 🌻 Floating hearts jadi bunga/emoji */
+
+.floating-hearts span {
+    filter: none;
+}
+
+/* Timeline kalau masih ada */
+
+.timeline-section h2 {
+    color: #d89b00;
+}
+
+.timeline::before {
+    background: #e8c84a;
+}
+
+.timeline-dot {
+    border-color: #e8c84a;
+}
+
+.timeline-date {
+    color: #d89b00;
+}
+
+/* =================================
+   🌻 SUNFLOWER FRAME
+================================= */
+
+/* COVER LAGU */
+
+.music-player .cover {
+    border: 4px solid #f2c230;
+
+    box-shadow:
+        0 0 0 3px #fff8cf,
+        0 6px 18px rgba(130, 95, 0, .18);
+}
+
+
+/* FOTO GALLERY */
+
+.gallery-item {
+    border: 3px solid #f2c230;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 248, 207, .9),
+        0 10px 25px rgba(130, 95, 0, .10);
+}
+
+.gallery-item:hover {
+    border-color: #dca500;
+
+    box-shadow:
+        0 0 0 4px #fff3b0,
+        0 15px 35px rgba(130, 95, 0, .20);
+}
+
+
+/* FOTO UTAMA */
+
+.gallery-item.featured {
+    border-width: 4px;
+}
+
+
+/* JUDUL SECTION */
+
+.gallery-section h2::first-letter {
+    color: #e5a900;
+}
+
+/* =================================
+   🌻 FINAL MOBILE POLISH
+================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    /* Opening */
+
+    .hero {
+        min-height: 70vh;
+        padding: 45px 20px 30px;
+    }
+
+    .hero-heart {
+        font-size: 48px;
+    }
+
+    .hero-small {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+        line-height: 1.8;
+        max-width: 340px;
+    }
+
+    .hero-date {
+        font-size: 11px;
+    }
+
+
+    /* Music */
+
+    .music-player {
+        width: calc(100% - 30px);
+        padding: 10px 12px;
+        gap: 10px;
+        border-radius: 18px;
+    }
+
+    .music-player .cover {
+        width: 50px;
+        height: 50px;
+        border-width: 3px;
+    }
+
+    .music-info b {
+        font-size: 12px;
+    }
+
+    .music-info span {
+        font-size: 10px;
+    }
+
+    #playBtn {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+
+    /* Gallery */
+
+    .gallery-section {
+        width: calc(100% - 28px);
+    }
+
+    .gallery-section h2 {
+        font-size: 28px;
+    }
+
+    .gallery-subtitle {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .gallery {
+        gap: 8px;
+    }
+
+    .gallery-item {
+        border-width: 2px;
+        border-radius: 14px;
+    }
+
+    .gallery-item.featured {
+        border-width: 3px;
+        border-radius: 18px;
+    }
+
+
+    /* Surat */
+
+    .letter-section,
+    .surprise-section,
+    .counter-section {
+        width: calc(100% - 28px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .letter-section h2,
+    .surprise-section h2,
+    .counter-section h2 {
+        font-size: 27px;
+    }
+
+    .letter-card,
+    .surprise-message {
+        padding: 20px 17px;
+        border-radius: 18px;
+    }
+
+    .letter-card p,
+    .surprise-message p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    /* Counter */
+
+    .counter {
+        gap: 7px;
+    }
+
+    .time-box {
+        padding: 12px 8px;
+        border-radius: 14px;
+    }
+
+    .time-box span {
+        font-size: 22px;
+    }
+
+    .time-box small {
+        font-size: 10px;
+    }
+
+
+    /* Floating sunflower */
+
+    .floating-hearts span {
+        font-size: 20px;
+    }
+
+}
