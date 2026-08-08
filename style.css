@@ -4,7 +4,7 @@ body {margin: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: cen ter;
+      align-items: center;
      
       background:#fdf187ff;
       font-family: Arial, Helvetica, sans-                   serif;
@@ -1530,5 +1530,134 @@ h1 {
 
     .time-box small {
         font-size: 0.8rem !important;
+    }
+}
+
+/* =================================
+   FINAL MOBILE BIG SIZE
+================================= */
+
+@media (max-width: 600px) {
+
+    /* HERO / HALAMAN AWAL */
+    .hero {
+        min-height: 85vh !important;
+        padding: 60px 18px 40px !important;
+    }
+
+    .hero-heart {
+        font-size: 70px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .hero-small {
+        font-size: 12px !important;
+        letter-spacing: 3px !important;
+    }
+
+    .hero h1 {
+        font-size: 48px !important;
+        line-height: 1.15 !important;
+    }
+
+    .hero-text {
+        font-size: 17px !important;
+        line-height: 1.9 !important;
+        max-width: 380px !important;
+    }
+
+    .hero-date {
+        font-size: 13px !important;
+    }
+
+
+    /* MUSIC PLAYER */
+    .music-player {
+        width: 94% !important;
+        max-width: 500px !important;
+        min-height: 100px !important;
+        padding: 15px !important;
+        gap: 14px !important;
+    }
+
+    .music-player .cover {
+        width: 72px !important;
+        height: 72px !important;
+        border-radius: 16px !important;
+    }
+
+    .music-icon {
+        font-size: 30px !important;
+    }
+
+    .music-info b {
+        font-size: 15px !important;
+    }
+
+    .music-info span {
+        font-size: 12px !important;
+    }
+
+    #playBtn {
+        width: 52px !important;
+        height: 52px !important;
+        font-size: 20px !important;
+    }
+
+
+    /* GALERI */
+    .gallery-section {
+        width: 94% !important;
+        padding: 30px 0 !important;
+    }
+
+    .gallery-section h2 {
+        font-size: 32px !important;
+    }
+
+    .gallery-subtitle {
+        font-size: 15px !important;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .gallery-item {
+        height: 200px !important;
+        border-radius: 16px !important;
+    }
+
+
+    /* SURAT */
+    .letter-section,
+    .surprise-section,
+    .counter-section {
+        width: 94% !important;
+        padding: 30px 0 !important;
+    }
+
+    .letter-section h2,
+    .surprise-section h2,
+    .counter-section h2 {
+        font-size: 32px !important;
+    }
+
+    .letter-card,
+    .surprise-message {
+        padding: 25px 20px !important;
+        font-size: 16px !important;
+    }
+
+
+    /* COUNTER */
+    .time-box {
+        min-width: 75px !important;
+        padding: 16px 10px !important;
+    }
+
+    .time-box span {
+        font-size: 25px !important;
     }
 }
