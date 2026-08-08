@@ -1386,3 +1386,149 @@ h1 {
     }
 
 }
+
+/* =================================
+   📱 MOBILE SIZE BOOST
+   ================================= */
+
+@media (max-width: 600px) {
+
+    /* Judul utama */
+    h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.25 !important;
+        padding: 0 20px !important;
+    }
+
+    /* Teks pembuka */
+    body > p {
+        font-size: 1.05rem !important;
+        line-height: 1.8 !important;
+        padding: 0 25px !important;
+    }
+
+    /* 🌻 Music Player */
+    .music-player {
+        width: calc(100% - 30px) !important;
+        max-width: 430px !important;
+        min-height: 85px !important;
+        padding: 12px !important;
+        margin: 30px auto !important;
+        border-radius: 22px !important;
+        box-sizing: border-box;
+    }
+
+    .music-player .cover {
+        width: 62px !important;
+        height: 62px !important;
+        object-fit: cover;
+        border-radius: 14px !important;
+    }
+
+    .music-icon {
+        font-size: 1.8rem !important;
+    }
+
+    .music-info {
+        font-size: 1rem !important;
+    }
+
+    .music-info span {
+        font-size: 0.85rem !important;
+    }
+
+    #playBtn {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.2rem !important;
+        border-radius: 50% !important;
+        flex-shrink: 0;
+    }
+
+    /* 📸 Gallery */
+    .gallery-section {
+        padding: 50px 15px !important;
+    }
+
+    .gallery-section h2 {
+        font-size: 2rem !important;
+    }
+
+    .gallery-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        padding: 0 15px !important;
+    }
+
+    /* 💌 Surat */
+    .letter-section {
+        padding: 50px 18px !important;
+    }
+
+    .letter-section h2 {
+        font-size: 2rem !important;
+    }
+
+    .letter-card {
+        width: 100% !important;
+        box-sizing: border-box;
+        padding: 25px !important;
+        font-size: 1rem !important;
+        line-height: 1.8 !important;
+    }
+
+    .letter-button {
+        font-size: 1rem !important;
+        padding: 14px 25px !important;
+    }
+
+    /* 🎁 Surprise */
+    .surprise-section {
+        padding: 50px 18px !important;
+    }
+
+    .surprise-section h2 {
+        font-size: 2rem !important;
+    }
+
+    .surprise-message {
+        width: 100% !important;
+        box-sizing: border-box;
+        padding: 25px !important;
+        font-size: 1rem !important;
+        line-height: 1.8 !important;
+    }
+
+    .gift-button {
+        width: 75px !important;
+        height: 75px !important;
+        font-size: 2rem !important;
+    }
+
+    /* ❤️ Counter */
+    .counter-section {
+        padding: 50px 15px !important;
+    }
+
+    .counter-section h2 {
+        font-size: 2rem !important;
+    }
+
+    .counter {
+        gap: 10px !important;
+        flex-wrap: wrap;
+    }
+
+    .time-box {
+        min-width: 70px !important;
+        padding: 15px 10px !important;
+    }
+
+    .time-box span {
+        font-size: 1.5rem !important;
+    }
+
+    .time-box small {
+        font-size: 0.8rem !important;
+    }
+}
